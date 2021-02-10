@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.example</groupId>
+    <groupId>org.task</groupId>
     <artifactId>Calculator</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -15,57 +15,25 @@
         <maven.checkstyle.plugin.version>3.1.0</maven.checkstyle.plugin.version>
         <maven.pmd.plugin.version>3.12.0</maven.pmd.plugin.version>
         <maven.jxr.plugin.version>3.0.0</maven.jxr.plugin.version>
-        <maven.surefire.plugin.version>3.0.0-M5</maven.surefire.plugin.version>
-        <juinit.jupiter.engine.version>5.7.0</juinit.jupiter.engine.version>
-        <juinit.platform.launcher.version>1.7.0</juinit.platform.launcher.version>
-        <mockito.version>1.10.19</mockito.version>
+        <maven.junit.version>4.13.1</maven.junit.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${juinit.jupiter.engine.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-launcher</artifactId>
-            <version>${juinit.platform.launcher.version}</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>${mockito.version}</version>
-            <scope>test</scope>
-        </dependency>
-
         <dependency>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-jxr-plugin</artifactId>
             <version>${maven.jxr.plugin.version}</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${maven.junit.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>${maven.surefire.plugin.version}</version>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.junit.platform</groupId>
-                        <artifactId>junit-platform-surefire-provider</artifactId>
-                        <version>1.2.0</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.junit.jupiter</groupId>
-                        <artifactId>junit-jupiter-engine</artifactId>
-                        <version>${juinit.jupiter.engine.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
