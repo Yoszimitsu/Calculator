@@ -65,9 +65,16 @@ public class CalculatorServiceTest {
     }
 
     @Test
-    public void executeCalculationTest_analyzeInstructionException() {
+    public void executeCalculationTest_analyzeInstructionException_1() {
         Assert.assertThrows(AnalyzeInstructionException.class,
-                () -> calculatorService.calculate("./src/test/java/resources/test-wrong-instruction-structure-file.txt", false)
+                () -> calculatorService.calculate("./src/test/java/resources/test-wrong-instruction-structure-file1.txt", false)
+        );
+    }
+
+    @Test
+    public void executeCalculationTest_analyzeInstructionException_2() {
+        Assert.assertThrows(AnalyzeInstructionException.class,
+                () -> calculatorService.calculate("./src/test/java/resources/test-wrong-instruction-structure-file2.txt", false)
         );
     }
 
