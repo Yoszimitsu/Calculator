@@ -1,3 +1,4 @@
 multiply 3
 add 2
+divide 2
 apply 10

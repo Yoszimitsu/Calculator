@@ -1,0 +1,4 @@
+multiply 3.5
+add 2.5
+divide 2.25
+apply 10
